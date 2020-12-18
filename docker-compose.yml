@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+
+  app:
+    container_name: backend
+    build: ./backend
+    ports:
+      - 3000:3000
+
+  ui:
+    container_name: frontend
+    build: ./frontend
+    stdin_open: true
+    tty: true
+    ports:
+      - 8080:8080
